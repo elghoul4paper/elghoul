@@ -1,0 +1,45 @@
+name: Deploy Vite React App
+
+on:
+  push:
+    branches:
+      - main  # Change if your branch is different
+
+jobs:
+  build:
+    runs-on: windows-latest  # ✅ Using Windows
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4  # ✅ Get source code
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4  # ✅ Setup Node.js
+        with:
+          node-version: '20'
+          cache: 'npm'  # Cache dependencies
+
+      - name: Install dependencies
+        run: npm install  # Install required packages
+
+      - name: Build Vite React App
+        run: npm run build  # Generate production files
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3  # ✅ Save build output
+        with:
+          name: vite-build
+          path: dist/  # Ensure dist/ exists
+
+  deploy:
+    runs-on: windows-latest
+    needs: build  # Wait for the build to finish
+    steps:
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: vite-build
+          path: dist/
+
+      - name: Deploy Application
+        run: echo "Deploying application..."
