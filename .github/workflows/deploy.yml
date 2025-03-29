@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4 # ✅ Updated to v4
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4 # ✅ Updated to v4
+        uses: actions/setup-node@v4 
         with:
-          node-version: "20" # ✅ Use latest stable version
+          node-version: "20" 
           cache: "npm"
 
       - name: Install dependencies
@@ -29,17 +29,17 @@ jobs:
         run: npm run build
 
       - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v3 # ✅ Ensure correct version
+        uses: actions/upload-artifact@v3 
         with:
           name: build-files
-          path: dist/ # Update based on your build output directory
+          path: dist/ 
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Download Build Artifacts
-        uses: actions/download-artifact@v3 # ✅ Correct artifact retrieval
+        uses: actions/download-artifact@v3 
         with:
           name: build-files
           path: dist/
