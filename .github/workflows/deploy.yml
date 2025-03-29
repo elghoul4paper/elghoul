@@ -7,14 +7,14 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest  # You can use windows-latest if needed
+    runs-on: ubuntu-latest  # أو windows-latest حسب نظام التشغيل
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3  # ✅ Use the latest version
+        uses: actions/checkout@v4  # 🔹 تأكد من استخدام أحدث إصدار
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3  # ✅ Use the latest version
+        uses: actions/setup-node@v4  # 🔹 تأكد من أن الإصدار صحيح
         with:
           node-version: '20'
           cache: 'npm'
@@ -29,17 +29,17 @@ jobs:
         run: npm run build
 
       - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v3  # ✅ Ensure correct version
+        uses: actions/upload-artifact@v3  # 🔹 تأكد من صحة الإصدار
         with:
           name: build-files
-          path: dist/  # Adjust based on your project
-          
+          path: dist/  # 🔹 تحقق من أن هذا المسار صحيح
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Download Build Artifacts
-        uses: actions/download-artifact@v3  # ✅ Ensure correct version
+        uses: actions/download-artifact@v3  # 🔹 تأكد من صحة الإصدار
         with:
           name: build-files
           path: dist/
