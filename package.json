@@ -1,5 +1,6 @@
 {
   "name": "vite-project",
+  "homepage": "https://github.com/elghoul4paper/elghoul.git",
   "private": true,
   "version": "0.0.0",
   "type": "module",
