@@ -46,7 +46,6 @@ const SimpleSlider = () => {
             style={{ pointerEvents: "none" }}
             className="w-full object-cover"
             src="tee.jpg"
-            alt="Slide 1"
           />
         </div>
         <div>
@@ -54,7 +53,6 @@ const SimpleSlider = () => {
             style={{ pointerEvents: "none" }}
             className="w-full object-cover"
             src="cartoon.jpg"
-            alt="Slide 2"
           />
         </div>
         <div>
@@ -62,7 +60,6 @@ const SimpleSlider = () => {
             style={{ pointerEvents: "none" }}
             className="w-full object-cover"
             src="cartoon-1.jpg"
-            alt="Slide 3"
           />
         </div>
       </Carousel>
