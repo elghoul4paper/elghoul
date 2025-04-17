@@ -20,14 +20,4 @@ const LandingSec = () => {
 
 export default LandingSec;
 
-{
-  /* <h1
-            className=" text-4xl  md:text-5xl xl:text-7xl 
-          dark:text-white text-center mt-7 font-bold sm:font-extrabold sm:text-right font-serif  "
-          >
-            اهلا<span className="text-amber-700">!</span>
-            <br />
-            elghoul
-            <span className="text-amber-700">.</span>
-          </h1> */
-}
+

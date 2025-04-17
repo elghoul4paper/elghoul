@@ -8,7 +8,7 @@ interface IProps {
 
 const Header = ({ toggleDarkMode, darkMode }: IProps) => {
   return (
-    <div className="dark:bg-[#141516]/80 bg-[#141516]/95 backdrop-blur-3xl   h-16 text-white flex items-center justify-between w-full sticky -top-1">
+    <div className="dark:bg-[#141516]/80 bg-[#141516]/95 backdrop-blur-3xl z-30  h-16 text-white flex items-center justify-between w-full sticky -top-1">
       <div className="container flex items-center justify-between m-auto px-7 max-h-[100%]">
         {/* <div className="w-25 h-25">
           <img src="logo.png" alt="" className=" max-w-[100%]" />

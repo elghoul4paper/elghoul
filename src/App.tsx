@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import LandingSec from "./components/LandingSec";
 import ProductsSec from "./components/ProductsSec";
+import Slider from "./components/slider";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -16,6 +17,7 @@ export default function App() {
     <div className="dark:bg-[#141516]">
       <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
       <LandingSec />
+      <Slider/>
       <ProductsSec />
     </div>
   );
