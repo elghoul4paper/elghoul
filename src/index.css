@@ -1,0 +1,22 @@
+@import "tailwindcss";
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  
+}
+ 
+ 
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* Container for the dots */
+.slick-dots {
+   
+  
+  transform: translateY(-2.5rem); /* Keep your upward shift */
+  
+  
+
+}
+
