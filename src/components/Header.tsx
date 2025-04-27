@@ -13,14 +13,21 @@ const Header = ({ toggleDarkMode, darkMode }: IProps) => {
         {/* <div className="w-25 h-25">
           <img src="logo.png" alt="" className=" max-w-[100%]" />
         </div> */}
-        <h1 className="font-[rakkas] text-3xl">الغول </h1>
+        <div className="flex items-center gap-6  justify-center">
+          <div>
+            <img
+              className="w-[50px] sm:w-[50px] h-full "
+              src="logo.png"
+              alt=""
+            />
+          </div>
+          <h1 className="font-[rakkas] text-4xl translate-x-[30%]">الغول </h1>
+        </div>
 
         <div className="flex items-center justify-center gap-1.5  ">
-          <p  >
-           للتواصل 
-          </p>
+        
           <p className="text-end">
-            01228482274 <br /> 01000418122 
+            01228482274 <br /> 01000418122
           </p>
           <button
             onClick={toggleDarkMode}

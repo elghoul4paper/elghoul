@@ -7,29 +7,39 @@ import ProductCardsOfString from "./ProductCardsOfString";
 import ProductCardsOfBubbles from "./ProductCardsOfBubbles";
 import ProductCardsOfTaps from "./ProductCardsOfTaps";
 import ProductCardsOfCarton from "./ProductCardsOfCarton";
+import NewProducts from "./newProducts";
 
 export default function ProductsSec() {
   return (
     <div className="dark:bg-[#141516] dark:text-white">
       <div className="flex sm:w-[80%] flex-col w-full justify-center pt-10 px-4 container m-auto ">
+        <NewProducts />
+
         <h1 className="text-center border-b-3 pb-2 w-fit mb-5 text-3xl font-bold m-auto">
           المنتجات
         </h1>
         <div className="w-full">
-          <TabGroup >
+          <TabGroup>
             <TabList className="flex flex-wrap  justify-center mb-12 ">
-              {["الكل", "ورق", "كرتون","سلوتيب", "استرتش", "فوم", "بابلز", "خيط"].map(
-                (tab, index) => (
-                  <Tab
-                    key={index}
-                    className=" dark:text-white dark:data-[selected]:bg-transparent dark:data-[hover]:bg-transparent dark:border-white   data-[selected]:border-b-3 border-black py-1 mx-1 sm:mx-3 flex flex-wrap text-xl sm:text-2xl font-semibold text-black focus:outline-none 
+              {[
+                "الكل",
+                "ورق",
+                "كرتون",
+                "سلوتيب",
+                "استرتش",
+                "فوم",
+                "بابلز",
+                "خيط",
+              ].map((tab, index) => (
+                <Tab
+                  key={index}
+                  className=" dark:text-white dark:data-[selected]:bg-transparent dark:data-[hover]:bg-transparent dark:border-white   data-[selected]:border-b-3 border-black py-1 mx-1 sm:mx-3 flex flex-wrap text-xl sm:text-2xl font-semibold text-black focus:outline-none 
                     
                 data-[focus]:outline-1 data-[focus]:outline-black hover:cursor-pointer  "
-                  >
-                    {tab}
-                  </Tab>
-                )
-              )}
+                >
+                  {tab}
+                </Tab>
+              ))}
             </TabList>
             <TabPanels className="mt-3 min-h-screen">
               {/* تبويب الكل */}
@@ -42,7 +52,7 @@ export default function ProductsSec() {
                   className=" flex flex-col gap-4"
                 >
                   <ProductCardsOfPaper />
-                  <ProductCardsOfCarton/>
+                  <ProductCardsOfCarton />
                   <ProductCardsOfFoam />
                   <ProductCardsOfStretch />
                   <ProductCardsOfString />
@@ -62,7 +72,6 @@ export default function ProductsSec() {
                 </motion.div>
               </TabPanel>
 
-             
               <TabPanel>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -71,7 +80,7 @@ export default function ProductsSec() {
                   transition={{ duration: 0.3 }}
                   className="rounded-xl"
                 >
-                  <ProductCardsOfCarton/>
+                  <ProductCardsOfCarton />
                 </motion.div>
               </TabPanel>
               <TabPanel>
@@ -82,7 +91,7 @@ export default function ProductsSec() {
                   transition={{ duration: 0.3 }}
                   className="rounded-xl"
                 >
-                  <ProductCardsOfTaps/>
+                  <ProductCardsOfTaps />
                 </motion.div>
               </TabPanel>
 

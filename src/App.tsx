@@ -16,6 +16,7 @@ export default function App() {
     <div className="dark:bg-[#141516] max-w-full">
       <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
        <MyComponent/>
+       
       <ProductsSec />
     </div>
   );
